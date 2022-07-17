@@ -6,6 +6,7 @@ public class item_handler : MonoBehaviour
 {
 
     public player_movement PlayerMove;
+    
 
     public string itemName = "item";
     public bool IsMeeleeWeapon = true;
@@ -15,7 +16,8 @@ public class item_handler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //PlayerMoveObj = GameObject.FindGameObjectWithTag("Player");
+        //PlayerMove = PlayerMoveObj;
     }
 
     // Update is called once per frame
@@ -31,16 +33,13 @@ public class item_handler : MonoBehaviour
             if(IsMeeleeWeapon == true)
             {
                 PlayerMove.meelee = itemName;
+                thisb.SetActive(false);
             }
             if(IsMeeleeWeapon == false)
             {
                 PlayerMove.ranged_magic = itemName;
-            }
-
-            
+                thisb.SetActive(false);
+            }  
         }
-
-        thisb.SetActive(false);
-
     }
 }
