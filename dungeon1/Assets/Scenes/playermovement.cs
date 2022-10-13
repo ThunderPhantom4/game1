@@ -67,10 +67,11 @@ public class player_movement : MonoBehaviour
             testSprite.SetActive(false);
             if (wasTestEquipedLastFrame == true)
             {
-                Instantiate(testPickup, new Vector3(0, 0, -2), Quaternion.identity);
+                //Instantiate(testPickup, new Vector3(0, 0, -2), Quaternion.identity);
                 wasTestEquipedLastFrame = false;
             }
             wasTestEquipedLastFrame = false;
+           
         }
         if (meelee == "dagger")
         {
@@ -87,13 +88,15 @@ public class player_movement : MonoBehaviour
         }
         else
         {
+            
             daggerSprite.SetActive(false);
             if(wasDaggerEquipedLastFrame == true)
             {
-                Instantiate(daggerPickup, new Vector3(0, 0, 2), Quaternion.identity);
+                //Instantiate(daggerPickup, new Vector3(0, 0, 2), Quaternion.identity);
                 wasDaggerEquipedLastFrame = false;
             }
             wasDaggerEquipedLastFrame = false;
+            
         }
 
 
